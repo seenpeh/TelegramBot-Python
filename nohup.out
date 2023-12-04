@@ -1,0 +1,172 @@
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 961, in button
+    f"[💻 نحوه اتصال ویندوز]({settings['help']['windows']})\n\n" \
+KeyError: 'windows'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_exceptions.py", line 10, in map_exceptions
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_backends/anyio.py", line 78, in start_tls
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_backends/anyio.py", line 69, in start_tls
+    ssl_stream = await anyio.streams.tls.TLSStream.wrap(
+  File "/usr/local/lib/python3.10/dist-packages/anyio/streams/tls.py", line 125, in wrap
+    await wrapper._call_sslobject_method(ssl_object.do_handshake)
+  File "/usr/local/lib/python3.10/dist-packages/anyio/streams/tls.py", line 140, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+  File "/usr/local/lib/python3.10/dist-packages/anyio/_backends/_asyncio.py", line 1104, in receive
+    raise self._protocol.exception from None
+anyio.BrokenResourceError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_transports/default.py", line 66, in map_httpcore_exceptions
+    yield
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_transports/default.py", line 366, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_async/connection_pool.py", line 268, in handle_async_request
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_async/connection_pool.py", line 251, in handle_async_request
+    response = await connection.handle_async_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_async/connection.py", line 99, in handle_async_request
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_async/connection.py", line 76, in handle_async_request
+    stream = await self._connect(request)
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_async/connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_backends/anyio.py", line 66, in start_tls
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.10/dist-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_transports/default.py", line 365, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_transports/default.py", line 83, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 935, in button
+    await query.edit_message_text("⏳")
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_callbackquery.py", line 241, in edit_message_text
+    return await self.message.edit_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_message.py", line 2536, in edit_text
+    return await self.get_bot().edit_message_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 1473, in edit_message_text
+    return await super().edit_message_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 3288, in edit_message_text
+    return await self._send_message(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 522, in _send_message
+    result = await super()._send_message(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 703, in _send_message
+    result = await self._post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 613, in _post
+    return await self._do_post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 641, in _do_post
+    return await request.post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_httpxrequest.py", line 292, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: 
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 961, in button
+    f"[💻 نحوه اتصال ویندوز]({settings['help']['windows']})\n\n" \
+KeyError: 'windows'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 935, in button
+    await query.edit_message_text("⏳")
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_callbackquery.py", line 241, in edit_message_text
+    return await self.message.edit_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_message.py", line 2536, in edit_text
+    return await self.get_bot().edit_message_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 1473, in edit_message_text
+    return await super().edit_message_text(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 525, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 3288, in edit_message_text
+    return await self._send_message(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 522, in _send_message
+    result = await super()._send_message(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 703, in _send_message
+    result = await self._post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 613, in _post
+    return await self._do_post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_extbot.py", line 340, in _do_post
+    return await super()._do_post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/_bot.py", line 641, in _do_post
+    return await request.post(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+  File "/usr/local/lib/python3.10/dist-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 961, in button
+    f"[💻 نحوه اتصال ویندوز]({settings['help']['windows']})\n\n" \
+KeyError: 'windows'
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_application.py", line 1234, in process_update
+    await coroutine
+  File "/usr/local/lib/python3.10/dist-packages/telegram/ext/_basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "/root/bot/jetnet.py", line 961, in button
+    f"[💻 نحوه اتصال ویندوز]({settings['help']['windows']})\n\n" \
+KeyError: 'windows'
+Login successful!

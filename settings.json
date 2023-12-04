@@ -1,0 +1,108 @@
+{
+    "token": "6767605694:AAGigS3soiCkNY_Kq2o8e0sdwDjWkk20Ejc",
+    "channel": "JetNetRobot",
+    "support": "JetNetVPNLink",
+    "cardNumber": "5022201097165953",
+    "cardName": "Soroush",
+    "admin": 6892713051,
+    "custom_sellers": [5628009460,247612805,93978801,134252468],
+    "banned_users": [],
+    "discounts": [],
+    "server": {
+        "name": "سرویس وی‌آي‌پی 🇺🇸🇹🇷🇩🇪🇳🇱🇦🇪",
+        "locations": ["هلند🇳🇱", "آلمان🇩🇪", "ترکیه🇹🇷", "آمریکا🇺🇸", "امارات🇦🇪"],
+        "description": "مدت زمان سرویس خود را انتخاب کنید",
+        "username": "jetnet",
+        "password": "baghali3",
+        "direct_domain": "https://panel.clackblack.xyz:8000",
+        "tunneled_domain": "https://f6m02pcyb8.top",
+        "domains": {
+        },
+        "plans": {
+            "30": [
+                {
+                    "data": 20,
+                    "prices": [
+                        60,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "data": 30,
+                    "prices": [
+                        90,
+                        100,
+                        0
+                    ]
+                },
+                {
+                    "data": 50,
+                    "prices": [
+                        130,
+                        140,
+                        150
+                    ]
+                },
+                {
+                    "data": 80,
+                    "prices": [
+                        160,
+                        170,
+                        180
+                    ]
+                },
+                {
+                    "data": 100,
+                    "prices": [
+                        0,
+                        0,
+                        200
+                    ]
+                },
+                {
+                    "data": 200,
+                    "prices": [
+                        200,
+                        250,
+                        300
+                    ]
+                }
+            ],
+            "60": [
+                {
+                    "data": 60,
+                    "prices": [
+                        160,
+                        180,
+                        200
+                    ]
+                },
+                {
+                    "data": 80,
+                    "prices": [
+                        180,
+                        200,
+                        220
+                    ]
+                },
+                {
+                    "data": 100,
+                    "prices": [
+                        200,
+                        220,
+                        240
+                    ]
+                }
+            ]
+        }
+    },
+    "help": {
+        "iphone": "https://t.me/PishiNetVPN/195",
+        "android": "https://t.me/PishiNetVPN/177",
+        "windows": "https://t.me/PishiNet"
+    },
+    "others":{
+        "سرویس ویژه خارج کشور": "ایران 🇮🇷"
+    }
+}
